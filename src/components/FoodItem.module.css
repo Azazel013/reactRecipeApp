@@ -1,0 +1,37 @@
+.container{
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+.itemImage{
+    width: 100%;
+    height: auto;
+} 
+.itemContent{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.itemName{
+    font-size: 1em;
+    font-weight: 600;
+    color: rgb(29, 29, 29);
+}
+.itemButton{
+    background-color: #299b98;
+    border: none;
+    color:white;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.buttonContainer{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
