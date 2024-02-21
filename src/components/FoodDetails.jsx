@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 import styles from './FoodDetails.module.css'
+import IngridentList from './IngridentList'
 export default function FoodDetails({foodId}) {
     const [foodDetails,setFoodDetails]=useState({})
     const [isLoading,setIsLoading]=useState(true)
@@ -34,10 +35,12 @@ export default function FoodDetails({foodId}) {
                 <div>
                   <span><strong>${foodDetails.pricePerServing/100} per serving</strong></span>
                 </div>
+                <h2>Ingredients</h2>
+                <IngridentList foodDetails={foodDetails} isLoading={isLoading}/>
                 <h1>Instructions</h1> 
                 <div className={styles.recipeInstructions}>
                     <ol>
-                    {isLoading ? <p>Loading...</p>:foodDetails.analyzedInstructions[0].steps.map((step)=>(<li>{step.step} </li>))}
+                    {isLoading ? <p>Loading...</p>:foodDetails.analyzedInstructions[0].steps.map((step)=>(<li key={step.number}>{step.step} </li>))}
                     </ol>
                     </div>
                 </div>
